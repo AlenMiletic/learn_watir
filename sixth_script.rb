@@ -1,20 +1,39 @@
 require 'watir'
 @browser = Watir::Browser.new :chrome
 
+def goto_puppy_site
+  @browser.goto "puppies.herokuapp.com"
+end
+
 def adopt_puppy_number(num)
   @browser.button(value: "View Details", index: num - 1).click
   @browser.button(value: "Adopt Me!").click
 end
 
-@browser.goto 'puppies.herokuapp.com'
+def adopt_another_puppy
+  @browser.button(value: "Adopt Another Puppy").click
+end
+
+def checkout(name, address, email, pay_type)
+  @browser.button(value: "Complete the Adoption").click
+  @browser.text_field(id: "order_name").set(name)
+  @browser.textarea(id: "order_address").set(address)
+  @browser.text_field(id: "order_email").set(email)
+  @browser.select_list(id: "order_pay_type").select(pay_type)
+  @browser.button(value: "Place Order").click
+end
+
+def verify(text)
+  fail unless @browser.text.include? text
+end
+
+def close_browser
+  @browser.close
+end
+goto_puppy_site
 adopt_puppy_number 1
-@browser.button(value: "Adopt Another Puppy").click
+adopt_another_puppy
 adopt_puppy_number 2
-@browser.button(value: "Complete the Adoption").click
-@browser.text_field(id: "order_name").set("Alen")
-@browser.textarea(id: "order_address").set("Ul.Grabrovec 151 \n 49210 Zabok")
-@browser.text_field(id: "order_email").set("alen.miletic6@gmail.com")
-@browser.select_list(id: "order_pay_type").select("Credit card")
-@browser.button(value: "Place Order").click
-fail "Browser text did not match expected value" unless @browser.text.include? "Thank you for adopting a puppy!"
-@browser.close
+checkout("Alen", "Ul.Grabrovec 151 \n49210 Zabok", "alen.miletic6@gmail.com", "Credit card")
+veify("Thank you for adopting a puppy!")
+close_browser
