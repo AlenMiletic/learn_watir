@@ -1,5 +1,4 @@
 Feature: Making Cheese
-
     As a cheese maker
     I want to make cheese
     so I can share my cheesiness

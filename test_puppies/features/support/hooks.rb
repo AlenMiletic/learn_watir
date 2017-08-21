@@ -3,7 +3,7 @@ require 'watir'
 
 
 Before do
-  @browser = Watir::Browser.new :chrome
+  @browser = Watir::Browser.new :firefox
 
 
 end
