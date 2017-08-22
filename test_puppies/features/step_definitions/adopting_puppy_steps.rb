@@ -1,3 +1,12 @@
+def row_for(line)
+  (line -1) * 6
+end
+
+def cart_line_item(line)
+  @browser.table(index: 0)[row_for(line)]
+end
+
+
 Given(/^I am on the puppy adoption site$/) do
   @browser.goto "http://puppies.herokuapp.com"
 end
@@ -48,12 +57,12 @@ end
 
 Then(/^I should see "([^"]*)" as the name for line item (\d+)$/) do |name, line|
   row = (line.to_i - 1) * 6
-  expect(@browser.table(index: 0)[row][1].text).to include name
+  expect(cart_line_item(line.to_i)[1].text).to include name
 end
 
 Then(/^I should see "([^"]*)" as the subtotal for line item (\d+)$/) do |price, line|
   row = (line.to_i - 1) * 6
-  expect(@browser.table(index: 0)[row][3].text).to include price
+  expect(cart_line_item(line.to_i)[3].text).to eql price
 end
 
 Then(/^I should see "([^"]*)" as the cart total$/) do |total|
