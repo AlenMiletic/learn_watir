@@ -15,7 +15,7 @@ end
 
 When(/^I click the Adopt Another Puppy button$/) do
   sleep 2
-  @browser.button(value: "Adopt Another Puppy").click
+  @cart.continue_shopping
 end
 
 When(/^I click the second View Details button$/) do
@@ -25,29 +25,30 @@ end
 
 When(/^I click the Complete the Adoption button$/) do
   sleep 2
-  @browser.button(value: "Complete the Adoption").click
+  @cart.proceed_to_checkout
+  @checkout = CheckoutPage.new(@browser)
 end
 
 When(/^I enter "([^"]*)" in the name field$/) do |name|
   sleep 2
-  @browser.text_field(id: "order_name").set(name)
+  @checkout.name = name
 end
 
 When(/^I enter "([^"]*)" in the address field$/) do |address|
-  @browser.textarea(id: "order_address").set(address)
+  @checkout.address = address
 end
 
 When(/^I enter "([^"]*)" in the email field$/) do |email|
-  @browser.text_field(id: "order_email").set(email)
+  @checkout.email = email
 end
 
 When(/^I select "([^"]*)" from the pay dropdown$/) do |pay_type|
-  @browser.select_list(id: "order_pay_type").select(pay_type)
+  @checkout.pay_type = pay_type
 end
 
 When(/^I click the Place Order button$/) do
   sleep 2 
-  @browser.button(value: "Place Order").click
+  @checkout.place_order
 end
 
 Then(/^I should see "([^"]*)"$/) do |expected|

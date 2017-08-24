@@ -19,13 +19,21 @@ class ShoppingCartPage
   def cart_total
     @browser.td(class: "total_cell").text
   end
-
-  def row_for(line_item)
-    (line_item -1)*LINES_PER_PUPPY
+  
+  def proceed_to_checkout
+    @browser.button(value: "Complete the Adoption").click
   end
 
-  def cart_line_item(line_item)
-    @browser.table(index: 0)[row_for(line_item)]
+  def continue_shopping
+    @browser.button(value: "Adopt Another Puppy").click
   end
+  private
 
+    def row_for(line_item)
+     (line_item -1)*LINES_PER_PUPPY
+    end
+
+    def cart_line_item(line_item)
+      @browser.table(index: 0)[row_for(line_item)]
+    end
 end
