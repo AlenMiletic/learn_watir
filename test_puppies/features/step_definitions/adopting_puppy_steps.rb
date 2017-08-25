@@ -5,7 +5,7 @@ end
 
 When(/^I click the first View Details button$/) do
   sleep 2
-  @home.select_puppy_number 1
+  on(HomePage).select_puppy_number 1
   @details = DetailsPage.new(@browser)
 end
 
