@@ -17,8 +17,17 @@ When(/^I click the Adopt Another Puppy button$/) do
   on(ShoppingCartPage).continue_shopping
 end
 
-When(/^I complete the adoption with:$/) do |table|
+When /^I complete the adoption with:$/ do |table|
   on(CheckoutPage).checkout(table.hashes.first)
+end
+
+When /^I complete the adoption using a Credit card$/ do
+  on(CheckoutPage).checkout("pay_type" => "Credit card")
+  sleep 2
+end
+
+When /^I complete the adoption$/ do
+  on(CheckoutPage).checkout
 end
 
 When(/^I click the Complete the Adoption button$/) do
