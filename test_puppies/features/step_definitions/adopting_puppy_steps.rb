@@ -17,6 +17,10 @@ When(/^I click the Adopt Another Puppy button$/) do
   on(ShoppingCartPage).continue_shopping
 end
 
+When(/^I complete the adoption with:$/) do |table|
+  on(CheckoutPage).checkout(table.hashes.first)
+end
+
 When(/^I click the Complete the Adoption button$/) do
   sleep 2
   on(ShoppingCartPage).proceed_to_checkout
