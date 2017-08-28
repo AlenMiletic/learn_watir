@@ -59,9 +59,10 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
+  faker
   page-object (~> 2.0)
   rake
   rspec
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
