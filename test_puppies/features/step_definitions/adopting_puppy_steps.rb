@@ -2,6 +2,8 @@ Given(/^I am on the puppy adoption site$/) do
   visit(HomePage)
 end
 
+DataMagic.load("the_other_file.yml")
+
 When(/^I click the View Details button for "([^"]*)"$/) do |name|
   sleep 2
   on(HomePage).select_puppy name
