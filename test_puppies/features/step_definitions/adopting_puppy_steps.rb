@@ -30,6 +30,16 @@ When /^I complete the adoption$/ do
   on(CheckoutPage).checkout
 end
 
+When /^I complete the adoption of a puppy$/ do
+  on(HomePage).select_puppy
+  sleep 2
+  on(DetailsPage).add_to_cart
+  sleep 2
+  on(ShoppingCartPage).proceed_to_checkout
+  sleep 2
+  on(CheckoutPage).checkout
+end
+
 When(/^I click the Complete the Adoption button$/) do
   sleep 2
   on(ShoppingCartPage).proceed_to_checkout
