@@ -1,8 +1,9 @@
 require_relative "error_panel"
-
+require_relative "side_menu_panel"
 class CheckoutPage
   include PageObject
   include DataMagic
+  include SideMenuPanel
 
   page_section(:error, ErrorPanel, id: "error_explanation")
   
