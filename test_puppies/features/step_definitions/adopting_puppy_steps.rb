@@ -49,10 +49,6 @@ When /^I checkout leaving the name field blank$/ do
   on(CheckoutPage).checkout("name" => "")
 end
 
-When /^I should see the error message "([^"]*)"$/ do |msg|
-  expect(on(CheckoutPage).error_messages).to include msg
-end
-
 When(/^I click the Complete the Adoption button$/) do
   sleep 2
   on(ShoppingCartPage).proceed_to_checkout
