@@ -1,7 +1,11 @@
+require_relative "error_panel"
+
 class CheckoutPage
   include PageObject
   include DataMagic
 
+  page_section(:error, ErrorPanel, id: "error_explanation")
+  
   text_field(:name, id: "order_name")
   text_area(:address, id: "order_address")
   text_field(:email, id: "order_email")
@@ -11,11 +15,6 @@ class CheckoutPage
   def checkout(data = {})
     populate_page_with data_for(:checkout_page, data)
     place_order
-  end
-
-  div(:error_div, id: "error_explanation")
-  unordered_list(:error_messages) do |page|
-    page.error_div_element.unordered_list_element
   end
 
 end
