@@ -33,20 +33,11 @@ When /^I complete the adoption$/ do
 end
 
 When /^I complete the adoption of a puppy$/ do
-  on(HomePage).select_puppy
-  sleep 2
-  on(DetailsPage).add_to_cart
-  sleep 2
-  on(ShoppingCartPage).proceed_to_checkout
-  sleep 2
-  on(CheckoutPage).checkout
+  navigate_all
 end
 
 When /^I checkout leaving the name field blank$/ do
-  on(HomePage).select_puppy
-  on(DetailsPage).add_to_cart
-  on(ShoppingCartPage).proceed_to_checkout
-  on(CheckoutPage).checkout("name" => "")
+  navigate_to(CheckoutPage).checkout("name" => "")
 end
 
 When(/^I click the Complete the Adoption button$/) do
@@ -93,3 +84,4 @@ end
 Then(/^I should see "([^"]*)" as the cart total$/) do |total|
   expect(on(ShoppingCartPage).cart_total).to eql total
 end
+

@@ -33,6 +33,7 @@ GEM
     page_navigation (0.10)
       data_magic (>= 0.22)
     rake (12.0.0)
+    require_all (1.5.0)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -63,7 +64,8 @@ DEPENDENCIES
   faker
   page-object (~> 2.0)
   rake
+  require_all
   rspec
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

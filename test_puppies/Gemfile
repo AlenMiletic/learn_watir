@@ -6,3 +6,4 @@ gem 'rake'
 gem 'faker'
 gem 'data_magic'
 gem 'page-object', '~> 2.0'
+gem "require_all"
