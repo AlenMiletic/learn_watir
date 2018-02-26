@@ -6,3 +6,4 @@ require 'require_all'
 require_all 'lib'
 
 World(PageObject::PageFactory)
+World(FactoryGirl::Syntax::Methods)

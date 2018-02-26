@@ -3,12 +3,7 @@ Given /^I know how many orders I have$/ do
 end
 
 When /^I create a new order$/ do
-  order = Order.new
-  order.name = "Cheezy"
-  order.address = "123 Main"
-  order.email = "cheezy@example.com"
-  order.pay_type = "Credit card"
-  order.save
+  create(:order)
 end
 
 Then /^I should have (\d+) additional order$/ do |int|
@@ -16,13 +11,8 @@ Then /^I should have (\d+) additional order$/ do |int|
 end
 
 Given /^I have an order for "([^"]*)"$/ do |name|
-  order = Order.new
-  order.name = name
-  order.address = "123 Main"
-  order.email = "cheezy@example.com"
-  order.pay_type = “Credit card”
-  order.save
-  @original_name = name
+  create(:order, name: name)
+  @riginal_name = name
 end
 
 When /^I read that order$/ do
