@@ -1,0 +1,241 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-24 09:54:33 -0400
+Processing by AgencyController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1mSELECT "puppies".* FROM "puppies" ORDER BY name LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "puppies" 
+  Rendered agency/index.html.erb within layouts/application (22.9ms)
+Compiled form.css  (1ms)  (pid 88992)
+Compiled layout.css  (3ms)  (pid 88992)
+Compiled puppies.css  (0ms)  (pid 88992)
+Compiled scaffold.css  (0ms)  (pid 88992)
+Compiled stylesheet.css  (30ms)  (pid 88992)
+Compiled application.css  (51ms)  (pid 88992)
+Compiled jquery.js  (2ms)  (pid 88992)
+Compiled jquery_ujs.js  (0ms)  (pid 88992)
+Compiled adoptions.js  (0ms)  (pid 88992)
+Compiled application.js  (23ms)  (pid 88992)
+Completed 200 OK in 170ms (Views: 161.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/form.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /form.css - 200 OK (1ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /layout.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /scaffold.css - 200 OK (2ms)
+
+
+Started GET "/assets/puppies.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /puppies.css - 200 OK (1ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /stylesheet.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/adoptions.js?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /adoptions.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/puppies.css" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /puppies.css - 200 OK (3ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /layout.css - 200 OK (3ms)
+
+
+Started GET "/assets/form.css" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /form.css - 200 OK (5ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /bg.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/bg_top.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /bg_top.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/search.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /search.jpg - 200 OK (7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /logo.png - 200 OK (6ms)
+
+
+Started GET "/assets/contact.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /contact.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/sb_top.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /sb_top.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/intro.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /intro.jpg - 200 OK (9ms)
+
+
+Started GET "/assets/Brook.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /Brook.jpg - 200 OK (3ms)
+
+
+Started GET "/assets/Hannah.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /Hannah.jpg - 200 OK (3ms)
+
+
+Started GET "/assets/ruby_sue.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /ruby_sue.jpg - 200 OK (6ms)
+
+
+Started GET "/assets/MaggieMae.jpg" for 127.0.0.1 at 2012-07-24 09:54:34 -0400
+Served asset /MaggieMae.jpg - 200 OK (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Processing by AgencyController#index as HTML
+  [1m[36mPuppy Load (0.3ms)[0m  [1mSELECT "puppies".* FROM "puppies" ORDER BY name LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "puppies" 
+  Rendered agency/index.html.erb within layouts/application (26.5ms)
+Compiled form.css  (1ms)  (pid 90904)
+Compiled layout.css  (3ms)  (pid 90904)
+Compiled puppies.css  (0ms)  (pid 90904)
+Compiled scaffold.css  (0ms)  (pid 90904)
+Compiled stylesheet.css  (3ms)  (pid 90904)
+Compiled application.css  (81ms)  (pid 90904)
+Compiled jquery.js  (32ms)  (pid 90904)
+Compiled jquery_ujs.js  (0ms)  (pid 90904)
+Compiled adoptions.js  (0ms)  (pid 90904)
+Compiled application.js  (67ms)  (pid 90904)
+Completed 200 OK in 266ms (Views: 257.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /application.css - 200 OK (37ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /layout.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /scaffold.css - 200 OK (1ms)
+
+
+Started GET "/assets/puppies.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /puppies.css - 200 OK (1ms)
+
+
+Started GET "/assets/form.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /form.css - 200 OK (2ms)
+
+
+Started GET "/assets/stylesheet.css?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /stylesheet.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/adoptions.js?body=1" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /adoptions.js - 200 OK (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /logo.png - 200 OK (8ms)
+
+
+Started GET "/assets/contact.jpg" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /contact.jpg - 200 OK (9ms)
+
+
+Started GET "/assets/Brook.jpg" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /Brook.jpg - 200 OK (42ms)
+
+
+Started GET "/assets/layout.css" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /layout.css - 200 OK (8ms)
+
+
+Started GET "/assets/form.css" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /form.css - 200 OK (6ms)
+
+
+Started GET "/assets/puppies.css" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /puppies.css - 200 OK (6ms)
+
+
+Started GET "/assets/Hannah.jpg" for 127.0.0.1 at 2012-07-25 12:57:57 -0400
+Served asset /Hannah.jpg - 200 OK (12ms)
+
+
+Started GET "/assets/MaggieMae.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /MaggieMae.jpg - 200 OK (9ms)
+
+
+Started GET "/assets/ruby_sue.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /ruby_sue.jpg - 200 OK (8ms)
+
+
+Started GET "/assets/bg.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /bg.jpg - 200 OK (9ms)
+
+
+Started GET "/assets/bg_top.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /bg_top.jpg - 200 OK (12ms)
+
+
+Started GET "/assets/search.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /search.jpg - 200 OK (9ms)
+
+
+Started GET "/assets/intro.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /intro.jpg - 200 OK (7ms)
+
+
+Started GET "/assets/sb_top.jpg" for 127.0.0.1 at 2012-07-25 12:57:58 -0400
+Served asset /sb_top.jpg - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-26 14:01:55 +0100
+Processing by AgencyController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (unsupported parameters: :order):
+  app/controllers/agency_controller.rb:6:in `index'
+
+
+  Rendered /Users/alenmiletic/.rvm/gems/ruby-2.4.0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/alenmiletic/.rvm/gems/ruby-2.4.0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/alenmiletic/.rvm/gems/ruby-2.4.0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
