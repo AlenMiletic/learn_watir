@@ -72,12 +72,12 @@ Then(/^I should see "([^"]*)"$/) do |expected|
   expect(@current_page.text).to include expected
 end
 
-Then(/^I should see "([^"]*)" as the name for (line item \d+)$/) do |name, line_item|
+Then(/^I should see "([^"]*)" as the name for line item (\d+)$/) do |name, line_item|
   sleep 2
   expect(on(ShoppingCartPage).name_for_line_item(line_item)).to include name
 end
 
-Then(/^I should see "([^"]*)" as the subtotal for (line item \d+)$/) do |subtotal, line_item|
+Then(/^I should see "([^"]*)" as the subtotal for line item (\d+)$/) do |subtotal, line_item|
   expect(on(ShoppingCartPage).subtotal_for_line_item(line_item)).to eql subtotal
 end
 

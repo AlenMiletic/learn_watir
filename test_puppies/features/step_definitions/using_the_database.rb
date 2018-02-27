@@ -6,13 +6,13 @@ When /^I create a new order$/ do
   create(:order)
 end
 
-Then /^I should have (\d+) additional order$/ do |int|
-  expect(Order.count).to_eql @number_orders + additional_orders.to_i
+Then /^I should have (\d+) additional order$/ do |additional_orders|
+  expect(Order.count).to eql @number_orders + additional_orders
 end
 
 Given /^I have an order for "([^"]*)"$/ do |name|
   create(:order, name: name)
-  @riginal_name = name
+  @original_name = name
 end
 
 When /^I read that order$/ do

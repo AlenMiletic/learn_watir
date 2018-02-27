@@ -18,5 +18,5 @@ Feature: Using the database in our tests
 
     Scenario: Delete an order subject
         Given I have an order for "Daisey Duck"
-        When I delete the order
+        When I delete that order
         Then I should not have a record for "Daisey Duck"
