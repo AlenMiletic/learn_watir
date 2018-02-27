@@ -1,6 +1,8 @@
 Given /^I have a pending adoption for "([^"]*)"$/ do |name|
-  navigate_to(CheckoutPage).checkout('name' => name)
+  order = build(:order, name: name)
+  create(:adoption, order: order)
 end
+
 When /^I process that adoption$/ do 
   visit(LandingPage) 
   on(LoginPage).login_to_system 
