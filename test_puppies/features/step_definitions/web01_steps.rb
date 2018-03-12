@@ -43,3 +43,15 @@ end
 Then("the default value from the prompt should be {string}") do |default|
   expect(@prompt_response[:default_value]).to eql default
 end
+
+When("I popup a window") do
+  on(FramesPage).popup_a_window
+end
+
+Then("I should be on a page with the text {string}") do |expected|
+  expect(@current_page.text).to include expected
+end
+
+Then("I should be able to close the popup and return to the original window") do
+  on(FramesPage).return_from_popup
+end
