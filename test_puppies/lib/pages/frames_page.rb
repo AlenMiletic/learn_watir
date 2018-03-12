@@ -16,4 +16,13 @@ class FramesPage
     self.sender = message
     send_to_receiver
   end
+
+  def alert_text
+    in_frame(:id => 'frame_3') do |frame|
+      @alert_text = alert(frame) do
+        button_element(:id => 'alert_button', :frame => frame).click
+      end
+    end
+    @alert_text
+  end
 end
