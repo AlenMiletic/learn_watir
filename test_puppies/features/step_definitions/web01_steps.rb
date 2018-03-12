@@ -19,3 +19,13 @@ end
 Then("the text from the alert should read {string}") do |expected|
   expect(@alert_text).to eql expected
 end
+
+When("I popup the confirm") do
+  on(FramesPage) do |page|
+    @confirm_text = page.confirm_text
+  end
+end
+
+Then("the text from the confirm should read {string}") do |expected|
+  expect(@confirm_text).to eql expected
+end

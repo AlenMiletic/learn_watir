@@ -25,4 +25,13 @@ class FramesPage
     end
     @alert_text
   end
+
+  def confirm_text
+    in_frame(:id => 'frame_3') do |frame|
+        @confirm_text = confirm(true, frame) do
+        button_element(:id => 'confirm_button', :frame => frame).click
+      end
+    end
+    @confirm_text
+  end
 end
