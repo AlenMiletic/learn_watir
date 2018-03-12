@@ -11,7 +11,7 @@ Then("the receiver should have {string}") do |expected|
 end
 
 When("I popup the alert") do
-  on(FramesPage) do |page| 
+  on(FramesPage) do |page|
     @alert_text = page.alert_text
   end
 end
@@ -28,4 +28,18 @@ end
 
 Then("the text from the confirm should read {string}") do |expected|
   expect(@confirm_text).to eql expected
+end
+
+When("I popup the prompt and enter {string}") do |value_to_enter|
+  on(FramesPage) do |page|
+    @prompt_response = page.prompt_value(value_to_enter)
+  end
+end
+
+Then("the message from the prompt should read {string}") do |message|
+  expect(@prompt_response[:message]).to eql message
+end
+
+Then("the default value from the prompt should be {string}") do |default|
+  expect(@prompt_response[:default_value]).to eql default
 end
