@@ -5,17 +5,14 @@ end
 DataMagic.load("the_other_file.yml")
 
 When(/^I click the View Details button for "([^"]*)"$/) do |name|
-  sleep 2
   on(HomePage).select_puppy name
 end
 
 When(/^I click the Adopt Me button$/) do
-  sleep 2
   on(DetailsPage).add_to_cart
 end
 
 When(/^I click the Adopt Another Puppy button$/) do
-  sleep 2
   on(ShoppingCartPage).continue_shopping
 end
 
