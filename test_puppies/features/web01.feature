@@ -21,6 +21,7 @@ Feature: Testing Web 0.1
         Then the message from the prompt should read "enter your name"
         And the default value from the prompt should be "John Doe"
 
+        @popup
     Scenario: Testing with popup windows
         Given I am on the frames page
         When I popup a window

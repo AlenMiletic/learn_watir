@@ -3,6 +3,7 @@ GEM
   specs:
     ADB (0.5.6)
       childprocess (>= 0.3.5)
+    actionpack (1.4.0)
     activemodel (3.2.1)
       activesupport (= 3.2.1)
       builder (~> 3.0.0)
@@ -51,6 +52,8 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.23)
+    fig_newton (1.0)
+      yml_reader (>= 0.7)
     gametel (0.8)
       ADB (>= 0.5.6)
       brazenhead (>= 0.4.8)
@@ -75,6 +78,9 @@ GEM
       watir (~> 6.8)
     page_navigation (0.10)
       data_magic (>= 0.22)
+    pretty_face (0.3)
+      actionpack
+      cucumber
     rack (2.0.4)
     rake (12.3.0)
     require_all (1.5.0)
@@ -132,9 +138,11 @@ DEPENDENCIES
   database_cleaner
   factory_girl
   faker
+  fig_newton
   gametel
   nokogiri
   page-object (~> 2.0)
+  pretty_face
   rake
   require_all
   rspec

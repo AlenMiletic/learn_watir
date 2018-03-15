@@ -1,0 +1,4 @@
+base_url: http://localhost:3000
+
+admin_unsername: steve
+admin_password: secret

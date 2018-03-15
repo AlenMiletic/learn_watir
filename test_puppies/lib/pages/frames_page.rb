@@ -3,7 +3,7 @@ class FramesPage
 
   page_url "http://puppies.herokuapp.com/frames.html"
 
-  in_frame(:id => 'frame_1') do |frame|
+  in_frame(:id => '"frame_1') do |frame|
     text_field(:sender, :id => 'senderElement', :frame => frame)
     button(:send_to_receiver, :id => 'send', :frame => frame)
   end

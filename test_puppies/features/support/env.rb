@@ -6,8 +6,10 @@ require 'factory_girl'
 require 'nokogiri'
 require 'builder'
 require 'soap-object'
+require 'fig_newton'
 
 require_all 'lib'
+
 
 World(PageObject::PageFactory)
 World(FactoryGirl::Syntax::Methods)

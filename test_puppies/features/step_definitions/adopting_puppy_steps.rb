@@ -25,7 +25,6 @@ end
 
 When /^I complete the adoption using a Credit card$/ do
   on(CheckoutPage).checkout("pay_type" => "Credit card")
-  sleep 2
 end
 
 When /^I complete the adoption$/ do
@@ -41,12 +40,10 @@ When /^I checkout leaving the name field blank$/ do
 end
 
 When(/^I click the Complete the Adoption button$/) do
-  sleep 2
   on(ShoppingCartPage).proceed_to_checkout
 end
 
 When(/^I enter "([^"]*)" in the name field$/) do |name|
-  sleep 2
   on(CheckoutPage).name = name
 end
 
@@ -63,17 +60,14 @@ When(/^I select "([^"]*)" from the pay dropdown$/) do |pay_type|
 end
 
 When(/^I click the Place Order button$/) do
-  sleep 2 
   on(CheckoutPage).place_order
 end
 
 Then(/^I should see "([^"]*)"$/) do |expected|
-  sleep 2
   expect(@current_page.text).to include expected
 end
 
 Then(/^I should see "([^"]*)" as the name for line item (\d+)$/) do |name, line_item|
-  sleep 2
   expect(on(ShoppingCartPage).name_for_line_item(line_item)).to include name
 end
 

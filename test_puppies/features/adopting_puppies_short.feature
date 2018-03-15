@@ -1,6 +1,6 @@
 Feature: Adopting puppies
 
-     Background: 
+     Background:
         Given I am on the puppy adoption site
 
     Scenario: Thank you message should be displayed

@@ -4,7 +4,7 @@ class HomePage
   include PageObject
   include SideMenuPanel
 
-page_url "puppies.herokuapp.com"
+  page_url FigNewton.base_url
 
 divs(:name, class: "name")
 buttons(:view_detail, value: "View Details")
